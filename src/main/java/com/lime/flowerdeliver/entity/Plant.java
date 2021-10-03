@@ -45,7 +45,7 @@ public class Plant {
 
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinTable(name="delivery_id")
+    @JoinColumn(name="delivery_id") //Not JoinTable!
     private Delivery delivery;
 
     public Long getId() {
